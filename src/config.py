@@ -8,7 +8,7 @@ ARTIFACTS_DIR = os.path.join(BASE_DIR, "artifacts")
 # Output Paths
 MODEL_PATH = os.path.join(ARTIFACTS_DIR, "on_time_delivery_model.pkl")
 
-# Feature Lists (Must match EXACTLY what was used in training)
+# Feature Lists
 NUMERIC_FEATURES = [
     'estimated_delivery_days', 'total_price', 'total_freight', 
     'total_items', 'product_weight_g'
@@ -18,4 +18,5 @@ CATEGORICAL_FEATURES = [
     'customer_state', 'seller_state', 'product_category_name_english',
     'payment_type'
 ]
+
 TARGET_COL = 'is_on_time'
