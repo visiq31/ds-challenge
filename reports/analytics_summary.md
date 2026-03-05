@@ -20,6 +20,11 @@ Top categories by GMV reveal where the capital flows. `health_beauty` leads in v
 
 ![Top Categories GMV](./figures/cat_chart.png)
 
+### C. Status Analysis
+Comparing Order Status against Review Scores reveals that logistical breakdowns (cancellations or items stuck in 'shipped' status) are **38x more likely** to occur in 1-star reviews compared to 5-star ratings. This confirms that operational completion is the non-negotiable baseline for customer satisfaction.
+
+![Score vs Status Distribution](./figures/status_vs_score.png)
+
 ---
 
 ## 3. Strategic Insights & Business Impact
@@ -36,3 +41,4 @@ With a **Repeat Purchase Rate of only 3.06%**, They are currently a "one-and-don
 ### Insight 3: Delivery as the Primary detractor
 *   **Data Support:** Analysis shows a 97% delivery rate, but the 1-star review spike correlates with the 5.3% delay rate in our test set.
 *   **Why it matters:** Customer satisfaction is not just about the product, it is about the "Last Mile." Here is where the ML model can act, the system can trigger automated apology emails with discount vouchers *before* the customer complains, converting a negative experience into a loyalty-building moment.
+
