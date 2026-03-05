@@ -5,9 +5,9 @@ from src.features import prepare_features
 def test_feature_engineering_structure():
     """
     Unit Test to verify that feature engineering produces the correct shape
-    and handles all expected columns, including the new 'payment_type'.
+    and handles all expected columns.
     """
-    # 1. Create Mock Data (simulating a raw row from the database)
+    # 1. Create Mock Data
     mock_data = pd.DataFrame({
         'order_id': ['123'],
         'order_purchase_timestamp': pd.to_datetime(['2018-01-01']),
@@ -26,12 +26,13 @@ def test_feature_engineering_structure():
     # 2. Run the function
     X, _, _ = prepare_features(mock_data, is_train=False)
     
-    # 3. Assertions (Validation)
+    # 3.Validation
     # Check if the payment_type column exists
     assert 'payment_type' in X.columns
     
     # Check if we have exactly the 7 features selected in config.py
-    # (estimated_days, price, freight, items, weight, distance_proxy, payment)
+
     expected_cols = 12 # 5 Numeric + 7 Categorical
     assert X.shape[1] == expected_cols 
+
     assert X.iloc[0]['is_same_state'] == 0
