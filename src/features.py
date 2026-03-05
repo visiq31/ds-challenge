@@ -2,7 +2,6 @@ import pandas as pd
 from src.config import NUMERIC_FEATURES, CATEGORICAL_FEATURES, TARGET_COL
 
 def prepare_features(df: pd.DataFrame, is_train: bool = True):
-    """Feature engineering logic matching training steps."""
     df = df.copy()
 
     if is_train:
@@ -15,7 +14,7 @@ def prepare_features(df: pd.DataFrame, is_train: bool = True):
     df['purchase_day_of_week'] = df['order_purchase_timestamp'].dt.dayofweek
     df['is_same_state'] = (df['customer_state'] == df['seller_state']).astype(int)
 
-    # Filling NAs (Strategies defined in Notebook analysis)
+    # Filling NAs
     df['product_category_name_english'] = df['product_category_name_english'].fillna('unknown')
     df['payment_type'] = df['payment_type'].fillna('unknown')
     df['product_weight_g'] = df['product_weight_g'].fillna(650.0) 
@@ -31,4 +30,5 @@ def prepare_features(df: pd.DataFrame, is_train: bool = True):
         y = df[TARGET_COL]
         return X, y, df
     
+
     return X, None, df
