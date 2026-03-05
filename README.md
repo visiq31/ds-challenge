@@ -1,4 +1,4 @@
-# Olist Marketplace: Delivery Prediction and Analytics
+# Delivery Prediction and Analytics
 
 This repository contains a full-cycle data science project focused on the Olist marketplace dataset. The objective was to extract meaningful business insights from historical orders and build a robust baseline model to predict delivery delays, aimed at improving customer satisfaction.
 
@@ -66,3 +66,4 @@ python -m src.main --customer_id <CUSTOMER_HASH_ID>
 The current model is a baseline and faces a few constraints:
 * **Static Geolocation:** We used state-to-state proxies for distance. Integrating exact coordinates from the geolocation dataset to calculate Haversine distance would likely improve accuracy.
 * **Feature Store:** Future iterations should include rolling-window features, such as the seller's average delay rate over the last 30 days, to capture recent logistical bottlenecks.
+
