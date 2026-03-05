@@ -1,6 +1,6 @@
 # Delivery Prediction and Analytics
 
-This repository contains a full-cycle data science project focused on the Olist marketplace dataset. The objective was to extract meaningful business insights from historical orders and build a robust baseline model to predict delivery delays, aimed at improving customer satisfaction.
+This repository contains a full-cycle data science project focused on E-commerce dataset. The objective was to extract meaningful business insights from historical orders and build a robust baseline model to predict delivery delays, aimed at improving customer satisfaction.
 
 ## 1. Executive Summary
 
@@ -8,7 +8,7 @@ The project is divided into two main parts: a descriptive analysis of the market
 
 ### Key Analytics Findings
 After analyzing ~99k orders from 2016 to 2018, three main patterns emerged:
-* **Retention Gap:** The repeat purchase rate is remarkably low at 3.06%. Olist currently operates as a high-acquisition, low-retention platform, where most customers do not return for a second purchase within the analyzed timeframe.
+* **Retention Gap:** The repeat purchase rate is remarkably low at 3.06%. They currently operates as a high-acquisition, low-retention platform, where most customers do not return for a second purchase within the analyzed timeframe.
 * **Satisfaction Detractors:** There is a clear correlation between logistical performance and customer reviews. While the majority of reviews are positive, the spike in 1-star ratings is heavily linked to orders delivered after the estimated date.
 * **Revenue vs. Volume:** Certain categories, such as Watches and Health & Beauty, drive the highest Gross Merchandise Value (GMV), despite not having the highest order volume. This suggests a need for segmented logistical strategies based on item value.
 
@@ -66,4 +66,5 @@ python -m src.main --customer_id <CUSTOMER_HASH_ID>
 The current model is a baseline and faces a few constraints:
 * **Static Geolocation:** We used state-to-state proxies for distance. Integrating exact coordinates from the geolocation dataset to calculate Haversine distance would likely improve accuracy.
 * **Feature Store:** Future iterations should include rolling-window features, such as the seller's average delay rate over the last 30 days, to capture recent logistical bottlenecks.
+
 
